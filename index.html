@@ -17,18 +17,12 @@
     header.hero-header {
       width: 100%;
       height: 160px;
-      background-image: url('pictures/headerbeans.jpg');
-      background-size: cover;
-      background-position: center;
+      background-image: url('pictures/logo.png');
+      background-size: contain;
       background-repeat: no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .logo-container img {
-      max-width: 240px;
-      height: auto;
+      background-position: center;
+      background-color: #a67c52;
+      border-bottom: 4px solid #4b3a2f;
     }
 
     nav {
@@ -82,8 +76,7 @@
 
     @media (max-width: 768px) {
       .grid { grid-template-columns: 1fr; }
-      header.hero-header { height: 120px; }
-      .logo-container img { max-width: 180px; }
+      header.hero-header { height: 120px; background-size: 80%; }
     }
 
     footer {
@@ -96,11 +89,7 @@
 </head>
 <body>
 
-  <header class="hero-header">
-    <div class="logo-container">
-      <img src="pictures/logo.png" alt="Brisa Salvadoreña Logo" />
-    </div>
-  </header>
+  <header class="hero-header"></header>
 
   <nav>
     <a href="#ueber-uns">Über uns</a>
