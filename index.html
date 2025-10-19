@@ -145,10 +145,15 @@
 
     .image-block {
       margin: 20px 0;
+      text-align: center;
     }
 
     .image-block img {
       width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
       border-radius: 8px;
     }
   </style>
@@ -228,4 +233,11 @@
     </section>
   </main>
 
-  <
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
