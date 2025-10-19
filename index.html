@@ -17,7 +17,7 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #f6f1e7;
+      background-color: #f4f0e8;
       color: #3d2b1f;
     }
 
@@ -117,22 +117,42 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 80px 20px 60px;
     }
 
     section {
-      margin-bottom: 100px;
+      margin-bottom: 80px;
       scroll-margin-top: 100px;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
       color: #4b3a2f;
-      border-bottom: 2px solid #3d2b1f;
-      padding-bottom: 5px;
-      margin-top: 40px;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .grid img {
+      max-width: 100%;
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     ul {
@@ -143,18 +163,11 @@
       color: #4b3a2f;
     }
 
-    .image-block {
-      margin: 20px 0;
+    footer {
       text-align: center;
-    }
-
-    .image-block img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 8px;
+      font-size: 14px;
+      color: #777;
+      padding: 40px 20px;
     }
   </style>
 </head>
@@ -183,61 +196,56 @@
 
   <main>
     <section id="ueber-uns">
-      <h2>Über uns</h2>
-      <p>Brisa Salvadoreña steht für die Verbindung von Natur, Kultur und Genuss. Unsere Produkte stammen aus den Vulkanregionen El Salvadors – mineralreiche Böden, familiäre Fincas, jahrhundertealte Traditionen.</p>
-      <div class="image-block">
-        <img src="pictures/farmercoffeecherries.png" alt="Farmer bei der Ernte" />
+      <div class="grid">
+        <div>
+          <h2>Über uns</h2>
+          <p>Brisa Salvadoreña ist eine Hommage an die Menschen, die mit Hingabe Kaffee und Kakao anbauen. Unsere Produkte stammen aus den Vulkanregionen El Salvadors – mineralreiche Böden, familiäre Fincas, jahrhundertealte Traditionen.</p>
+          <p>Wir arbeiten direkt mit Kleinbauern zusammen, fördern nachhaltige Landwirtschaft und garantieren faire Preise. Jeder Schluck erzählt eine Geschichte von Erde, Sonne und Seele.</p>
+        </div>
+        <div>
+          <img src="pictures/farmercoffeecherries.png" alt="Farmer bei der Ernte" />
+        </div>
       </div>
-      <p>Wir arbeiten direkt mit Kleinbauern zusammen, fördern nachhaltige Landwirtschaft und garantieren faire Preise. Jeder Schluck erzählt eine Geschichte von Erde, Sonne und Seele.</p>
     </section>
 
     <section id="produkte">
-      <h2>Produkte</h2>
-      <ul>
-        <li><strong>Café Brisa Salvadoreña:</strong> 100 % Arabica Bourbon, handverlesen, sonnengetrocknet, mit Noten von Schokolade, roten Beeren und Zitrus.</li>
-        <li><strong>Ceremonia del Cacao:</strong> Zeremonieller Kakao, 100 % pur, aus alten Criollo-Bohnen, ideal für Meditation, Rituale oder bewussten Genuss.</li>
-        <li><strong>Kakaonibs:</strong> Knusprige Energie aus purer Kakaobohne – ideal für Müsli, Smoothies oder pur.</li>
-      </ul>
-      <div class="image-block">
-        <img src="pictures/coffee.png" alt="Kaffeetasse auf Holz" />
+      <div class="grid">
+        <div>
+          <img src="pictures/coffee.png" alt="Kaffeetasse auf Holz" />
+        </div>
+        <div>
+          <h2>Produkte</h2>
+          <ul>
+            <li><strong>Café Brisa Salvadoreña:</strong> 100 % Arabica Bourbon, handverlesen, sonnengetrocknet, mit Noten von Schokolade, roten Beeren und Zitrus.</li>
+            <li><strong>Ceremonia del Cacao:</strong> Zeremonieller Kakao, 100 % pur, aus alten Criollo-Bohnen, ideal für Meditation, Rituale oder bewussten Genuss.</li>
+            <li><strong>Kakaonibs:</strong> Knusprige Energie aus purer Kakaobohne – ideal für Müsli, Smoothies oder pur.</li>
+          </ul>
+          <p>Alle Produkte stammen direkt von unseren Partnerfincas und werden ohne Zwischenhändler vertrieben. So garantieren wir höchste Qualität und faire Preise für die Produzenten.</p>
+        </div>
       </div>
-      <p>Alle Produkte stammen direkt von unseren Partnerfincas und werden ohne Zwischenhändler vertrieben. So garantieren wir höchste Qualität und faire Preise für die Produzenten.</p>
     </section>
 
     <section id="geschichte">
-      <h2>Unsere Geschichte</h2>
-      <p>Die Idee zu Brisa Salvadoreña entstand auf einer Reise durch die Kaffeeplantagen rund um den Vulkan Izalco. Die Begegnungen mit den Menschen vor Ort, ihre Leidenschaft und ihr Wissen über den Anbau von Kaffee und Kakao haben uns tief beeindruckt.</p>
-      <div class="image-block">
-        <img src="pictures/farmer1.png" alt="Kaffeebauer in El Salvador" />
+      <div class="grid">
+        <div>
+          <h2>Unsere Geschichte</h2>
+          <p>Die Idee zu Brisa Salvadoreña entstand auf einer Reise durch die Kaffeeplantagen rund um den Vulkan Izalco. Die Begegnungen mit den Menschen vor Ort, ihre Leidenschaft und ihr Wissen über den Anbau von Kaffee und Kakao haben uns tief beeindruckt.</p>
+          <p>Heute arbeiten wir mit mehreren Familienbetrieben zusammen, die ihre Produkte mit Liebe und Sorgfalt herstellen. Unsere Geschichte ist jung, aber sie wurzelt tief in der Tradition und dem Stolz eines Landes, das Geschmack, Kultur und Herzblut vereint.</p>
+        </div>
+        <div>
+          <img src="pictures/farmer1.png" alt="Kaffeebauer in El Salvador" />
+        </div>
       </div>
-      <p>Heute arbeiten wir mit mehreren Familienbetrieben zusammen, die ihre Produkte mit Liebe und Sorgfalt herstellen. Unsere Geschichte ist jung, aber sie wurzelt tief in der Tradition und dem Stolz eines Landes, das Geschmack, Kultur und Herzblut vereint.</p>
     </section>
 
     <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Du möchtest mehr über unsere Produkte erfahren oder mit uns zusammenarbeiten? Schreib uns!</p>
-      <p>
-        📧 E-Mail: <a href="mailto:info@brisasalvadorena.com">info@brisasalvadorena.com</a><br />
-        📸 Instagram: <a href="https://instagram.com/brisasalvadorena" target="_blank">@brisasalvadorena</a><br />
-        📍 Standort: Berlin, Deutschland
-      </p>
-    </section>
-
-    <section id="impressum">
-      <h2>Impressum</h2>
-      <p>Brisa Salvadoreña GmbH<br />
-      Musterstraße 1<br />
-      12345 Berlin<br />
-      Handelsregister: HRB 123456<br />
-      Geschäftsführer: Huawai</p>
-    </section>
-  </main>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav').classList.toggle('active');
-    }
-  </script>
-
-</body>
-</html>
+      <div class="grid">
+        <div>
+          <img src="pictures/landscape.png" alt="Landschaft El Salvador" />
+        </div>
+        <div>
+          <h2>Kontakt</h2>
+          <p>Du möchtest mehr über unsere Produkte erfahren oder mit uns zusammenarbeiten? Schreib uns!</p>
+          <p>
+            📧 E-Mail: <a href="mailto:info@brisasalvadorena.com">info@brisasalvadorena.com</a><br />
+            📸 Instagram: <a href="https://instagram
