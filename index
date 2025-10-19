@@ -1,1 +1,33 @@
-
+<nav id="main-nav"><a href="#ueber-uns">Über uns</a> <a href="#produkte">Produkte</a> <a href="#geschichte">Unsere Geschichte</a> <a href="#kontakt">Kontakt</a> <a href="#impressum">Impressum</a></nav><main>
+<section id="ueber-uns">
+<h2>Über uns</h2>
+<p>Brisa Salvadoreña steht für die frische Brise aus den Vulkanregionen El Salvadors. Unsere hochwertigen Produkte stammen von kleinen Fincas rund um den Vulkan Izalco, wo mineralreiche Böden und traditionelles Handwerk beste Qualität garantieren.</p>
+</section>
+<section id="produkte">
+<h2>Produkte</h2>
+<ul>
+<li><strong>Café Brisa Salvadoreña:</strong> 100 % Arabica Bourbon, Noten von Schokolade, roten Beeren und Zitrus</li>
+<li><strong>Ceremonia del Cacao:</strong> Zeremonieller Kakao, 100 % pur, ideal für Meditation &amp; bewussten Genuss</li>
+</ul>
+</section>
+<section id="geschichte">
+<h2>Unsere Geschichte</h2>
+<p>Gegründet aus Leidenschaft für salvadorianische Kultur und Geschmack. Unsere Reise begann mit einer Vision: die Seele El Salvadors durch Kaffee und Kakao zu teilen – ehrlich, nachhaltig und direkt.</p>
+</section>
+<section id="kontakt">
+<h2>Kontakt</h2>
+<p>E-Mail: <a href="mailto:info@brisasalvadorena.com">info@brisasalvadorena.com</a><br>Instagram: <a href="https://instagram.com/brisasalvadorena" target="_blank" rel="noopener">@brisasalvadorena</a></p>
+</section>
+<section id="impressum">
+<h2>Impressum</h2>
+<p>Brisa Salvadoreña GmbH<br>Musterstraße 1<br>12345 Berlin<br>Handelsregister: HRB 123456<br>Geschäftsführer: Huawai</p>
+</section>
+</main>
+<p>
+<script>
+    window.addEventListener('scroll', function () {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</p>
