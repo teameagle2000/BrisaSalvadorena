@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brisa Salvadoreña – Kaffee & Kakao mit Seele</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -15,7 +16,7 @@
 
     body {
       margin: 0;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Open Sans', sans-serif;
       background-color: #F1E9DC;
       color: #3D2B1F;
     }
@@ -94,10 +95,31 @@
       }
     }
 
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?coffee,farm');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
     main {
       max-width: 800px;
       margin: 0 auto;
-      padding: 120px 20px 60px;
+      padding: 60px 20px;
     }
 
     section {
@@ -106,6 +128,7 @@
     }
 
     h2 {
+      font-family: 'Playfair Display', serif;
       color: #255734;
       border-bottom: 2px solid #3D2B1F;
       padding-bottom: 5px;
@@ -118,6 +141,15 @@
 
     a {
       color: #255734;
+    }
+
+    .image-block {
+      margin: 20px 0;
+    }
+
+    .image-block img {
+      width: 100%;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -140,12 +172,18 @@
     </div>
   </header>
 
+  <div class="hero">
+    <h1>Brisa Salvadoreña – Kaffee & Kakao mit Seele</h1>
+  </div>
+
   <main>
     <section id="ueber-uns">
       <h2>Über uns</h2>
-      <p>Brisa Salvadoreña ist mehr als eine Marke – es ist eine Bewegung. Wir bringen die Seele El Salvadors in Form von Kaffee und Kakao direkt zu dir. Unsere Produkte stammen aus den fruchtbaren Vulkanregionen rund um Izalco, wo die Erde Geschichten erzählt und die Menschen mit Hingabe arbeiten.</p>
-      <p>Unsere Vision ist es, Genuss mit Verantwortung zu verbinden. Wir arbeiten direkt mit Kleinbauern zusammen, fördern nachhaltige Landwirtschaft und achten auf faire Preise. Jeder Schluck ist ein Beitrag zu einer gerechteren Welt.</p>
-      <p>Wir glauben an Transparenz, Qualität und kulturellen Austausch. Deshalb erzählen wir die Geschichten hinter unseren Produkten – von der Pflanze bis zur Tasse.</p>
+      <p>Brisa Salvadoreña ist eine Hommage an die Menschen, die mit Hingabe Kaffee und Kakao anbauen. Unsere Produkte stammen aus den Vulkanregionen El Salvadors – mineralreiche Böden, familiäre Fincas, jahrhundertealte Traditionen.</p>
+      <div class="image-block">
+        <img src="https://source.unsplash.com/800x500/?coffee,plantation" alt="Kaffeeplantage">
+      </div>
+      <p>Wir arbeiten direkt mit Kleinbauern zusammen, fördern nachhaltige Landwirtschaft und garantieren faire Preise. Jeder Schluck erzählt eine Geschichte von Erde, Sonne und Seele.</p>
     </section>
 
     <section id="produkte">
@@ -153,18 +191,21 @@
       <ul>
         <li><strong>Café Brisa Salvadoreña:</strong> 100 % Arabica Bourbon, handverlesen, sonnengetrocknet, mit Noten von Schokolade, roten Beeren und Zitrus.</li>
         <li><strong>Ceremonia del Cacao:</strong> Zeremonieller Kakao, 100 % pur, aus alten Criollo-Bohnen, ideal für Meditation, Rituale oder bewussten Genuss.</li>
-        <li><strong>Kaffeebohnen im Geschenkset:</strong> In liebevoll gestalteter Verpackung – perfekt zum Verschenken.</li>
         <li><strong>Kakaonibs:</strong> Knusprige Energie aus purer Kakaobohne – ideal für Müsli, Smoothies oder pur.</li>
-        <li><strong>Limited Editions:</strong> Saisonale Spezialitäten mit besonderen Röstprofilen und Geschichten.</li>
       </ul>
+      <div class="image-block">
+        <img src="https://source.unsplash.com/800x500/?cacao,beans" alt="Kakaobohnen">
+      </div>
       <p>Alle Produkte stammen direkt von unseren Partnerfincas und werden ohne Zwischenhändler vertrieben. So garantieren wir höchste Qualität und faire Preise für die Produzenten.</p>
     </section>
 
     <section id="geschichte">
       <h2>Unsere Geschichte</h2>
-      <p>Die Reise begann mit einer Tasse Kaffee in einem kleinen Dorf am Fuße des Vulkans Izalco. Die Aromen, die Menschen, die Geschichten – all das inspirierte uns, Brisa Salvadoreña zu gründen.</p>
-      <p>Heute arbeiten wir mit über 20 Familienbetrieben zusammen, die ihre Produkte mit Liebe und Sorgfalt herstellen. Wir besuchen die Fincas regelmäßig, tauschen uns aus und lernen voneinander.</p>
-      <p>Unsere Geschichte ist jung, aber sie wurzelt tief in der Tradition und dem Stolz eines Landes, das so viel mehr zu bieten hat als nur schöne Strände – nämlich Geschmack, Kultur und Herzblut.</p>
+      <p>Die Idee zu Brisa Salvadoreña entstand auf einer Reise durch die Kaffeeplantagen rund um den Vulkan Izalco. Die Begegnungen mit den Menschen vor Ort, ihre Leidenschaft und ihr Wissen über den Anbau von Kaffee und Kakao haben uns tief beeindruckt.</p>
+      <div class="image-block">
+        <img src="https://source.unsplash.com/800x500/?coffee,farmer" alt="Kaffeebauer">
+      </div>
+      <p>Heute arbeiten wir mit mehreren Familienbetrieben zusammen, die ihre Produkte mit Liebe und Sorgfalt herstellen. Unsere Geschichte ist jung, aber sie wurzelt tief in der Tradition und dem Stolz eines Landes, das Geschmack, Kultur und Herzblut vereint.</p>
     </section>
 
     <section id="kontakt">
@@ -179,19 +220,4 @@
 
     <section id="impressum">
       <h2>Impressum</h2>
-      <p>Brisa Salvadoreña GmbH<br />
-      Musterstraße 1<br />
-      12345 Berlin<br />
-      Handelsregister: HRB 123456<br />
-      Geschäftsführer: Huawai</p>
-    </section>
-  </main>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav').classList.toggle('active');
-    }
-  </script>
-
-</body>
-</html>
+      <p
