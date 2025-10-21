@@ -17,14 +17,22 @@
     header {
       position: relative;
       width: 100%;
-      height: 220px;
+      max-height: 220px;
       overflow: hidden;
     }
 
     header img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
+      display: block;
+    }
+
+    .pride-banner {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      display: block;
     }
 
     nav {
@@ -34,21 +42,60 @@
       width: 100%;
       background-color: #3e230a;
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 15px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
       z-index: 1000;
     }
 
-    nav a {
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
       color: #f0d7a1;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
     }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #f0d7a1;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #3e230a;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
     main {
-      padding: 60px 20px 40px;
+      padding: 80px 20px 40px;
       max-width: 1200px;
       margin: auto;
     }
@@ -107,15 +154,24 @@
 </head>
 <body>
   <nav>
-    <a href="#ueberuns">Über uns</a>
-    <a href="#story">Unsere Geschichte</a>
-    <a href="#produkte">Produkte</a>
-    <a href="#kontakt">Kontakt</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#ueberuns">Über uns</a>
+      <a href="#story">Unsere Geschichte</a>
+      <a href="#produkte">Produkte</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
   </nav>
 
   <header>
     <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
   </header>
+
+  <img src="pictures/roasted_with_pride.jpg" alt="Roasted with Pride" class="pride-banner" />
 
   <main>
     <section id="ueberuns">
@@ -168,5 +224,12 @@
     <p>&copy; 2025 Brisa Salvadoreña</p>
     <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
