@@ -20,13 +20,18 @@
       padding: 0 20px;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
+    header img,
+    .pride-banner {
       width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    nav {
       background-color: #6f4e37;
-      z-index: 1000;
     }
 
     .nav-inner {
@@ -85,18 +90,8 @@
       }
     }
 
-    header img,
-    .pride-banner {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      margin: 0 auto;
-    }
-
     main {
-      padding: 100px 0 40px;
+      padding: 40px 0;
     }
 
     h2 {
@@ -159,6 +154,10 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
+  </header>
+
   <nav>
     <div class="nav-inner">
       <div class="hamburger" onclick="toggleMenu()">
@@ -175,10 +174,6 @@
       </div>
     </div>
   </nav>
-
-  <header>
-    <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
-  </header>
 
   <div class="container">
     <img src="pictures/roasted_with_pride.jpg" alt="Roasted with Pride" class="pride-banner" />
