@@ -31,6 +31,9 @@
       gap: 30px;
       background-color: #3e230a;
       padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
@@ -52,6 +55,12 @@
       margin-bottom: 20px;
     }
 
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
     p {
       font-size: 16px;
       line-height: 1.6;
@@ -64,11 +73,17 @@
       margin-top: 30px;
     }
 
+    .grid div {
+      background-color: #fff8e6;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
     .grid img {
       width: 100%;
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -92,6 +107,7 @@
       <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
     </div>
     <nav>
+      <a href="#ueberuns">Über uns</a>
       <a href="#story">Unsere Geschichte</a>
       <a href="#produkte">Produkte</a>
       <a href="#kontakt">Kontakt</a>
@@ -99,10 +115,17 @@
   </header>
 
   <main>
+    <section id="ueberuns">
+      <h2>Über uns</h2>
+      <p>
+        Brisa Salvadoreña ist mehr als Kaffee – es ist ein Lebensgefühl. Wir sind ein Familienbetrieb aus El Salvador, der mit Leidenschaft und Respekt gegenüber Natur und Mensch arbeitet. Unsere Bohnen stammen aus nachhaltigem Anbau, handverlesen und mit Liebe geröstet.
+      </p>
+    </section>
+
     <section id="story">
       <h2>Unsere Geschichte</h2>
       <p>
-        Jede Bohne erzählt eine Geschichte – von den Hügeln El Salvadors, von den Händen der Produzenten, von Tradition und Hingabe. Brisa Salvadoreña steht für Authentizität, Nachhaltigkeit und die Kunst des Röstens.
+        Gegründet in den Hügeln von Santa Ana, entstand Brisa Salvadoreña aus dem Wunsch, die Schönheit und Tiefe salvadorianischen Kaffees mit der Welt zu teilen. Unsere Farmen sind Orte der Begegnung, der Rituale und des Wissens – wo jede Bohne eine Geschichte trägt.
       </p>
     </section>
 
@@ -111,15 +134,23 @@
       <div class="grid">
         <div>
           <img src="pictures/bourbon.jpg" alt="Bourbon Arabica" />
+          <h3>Bourbon</h3>
+          <p>Mild, süßlich, mit ausgewogener Säure. Eine der ältesten Arabica-Varietäten aus Santa Ana und Ahuachapán.</p>
         </div>
         <div>
           <img src="pictures/pacamara.jpg" alt="Pacamara Arabica" />
+          <h3>Pacamara</h3>
+          <p>Große Bohnen mit komplexem Aroma, floralen und fruchtigen Noten. Beliebt bei Spezialitätenröstern.</p>
         </div>
         <div>
           <img src="pictures/caturra_typica.jpg" alt="Caturra & Typica" />
+          <h3>Caturra & Typica</h3>
+          <p>Klassische Arabica-Varietäten mit feinem Körper und klarer Säure. Häufig in kleineren Farmen zu finden.</p>
         </div>
         <div>
           <img src="pictures/cuyancua_kakao.jpg" alt="Zeremonieller Kakao Cuyancùa" />
+          <h3>Cuyancùa Kakao</h3>
+          <p>Zeremonieller Kakao aus alten Criollo-Bohnen. Für Rituale, Meditation und bewussten Genuss.</p>
         </div>
       </div>
     </section>
