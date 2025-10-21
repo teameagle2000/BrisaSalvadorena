@@ -4,166 +4,135 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brisa Salvadoreña</title>
+  <link rel="icon" href="pictures/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #e2d2c0;
-      color: #3d2b1f;
-      line-height: 1.6;
+      background-color: #f0d7a1;
+      color: #3e230a;
     }
 
-    header.hero-header {
+    .hero-header {
+      background-color: #f0d7a1;
+      text-align: center;
+    }
+
+    .logo-container img {
       width: 100%;
-      height: 160px;
-      background-image: url('pictures/logo.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #a67c52;
-      border-bottom: 4px solid #4b3a2f;
+      max-height: 220px;
+      object-fit: cover;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
+      background-color: #3e230a;
       padding: 15px;
-      background-color: #4b3a2f;
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
 
     nav a {
-      color: #fff;
+      color: #f0d7a1;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
 
     main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    section {
-      margin-bottom: 80px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: 28px;
       margin-bottom: 20px;
-      color: #4b3a2f;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
 
     .grid img {
-      max-width: 100%;
-      max-height: 400px;
-      object-fit: cover;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
-      header.hero-header { height: 120px; background-size: 80%; }
+    footer {
+      background-color: #3e230a;
+      color: #f0d7a1;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
     }
 
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      padding: 40px 20px;
+    footer a {
+      color: #f0d7a1;
+      text-decoration: underline;
+      margin: 0 10px;
     }
   </style>
 </head>
 <body>
-
-  <header class="hero-header"></header>
-
-  <nav>
-    <a href="#ueber-uns">Über uns</a>
-    <a href="#produkte">Produkte</a>
-    <a href="#geschichte">Unsere Geschichte</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#impressum">Impressum</a>
-  </nav>
+  <header class="hero-header">
+    <div class="logo-container">
+      <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
+    </div>
+    <nav>
+      <a href="#story">Unsere Geschichte</a>
+      <a href="#produkte">Produkte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
   <main>
-    <section id="ueber-uns">
-      <div class="grid">
-        <div>
-          <h2>Über uns</h2>
-          <p>Brisa Salvadoreña ist eine Hommage an die Menschen, die mit Hingabe Kaffee und Kakao anbauen. Unsere Produkte stammen aus den Vulkanregionen El Salvadors – mineralreiche Böden, familiäre Fincas, jahrhundertealte Traditionen.</p>
-          <p>Wir arbeiten direkt mit Kleinbauern zusammen, fördern nachhaltige Landwirtschaft und garantieren faire Preise. Jeder Schluck erzählt eine Geschichte von Erde, Sonne und Seele.</p>
-        </div>
-        <div><img src="pictures/farmercoffeecherries.png" alt="Farmer bei der Ernte" /></div>
-      </div>
+    <section id="story">
+      <h2>Unsere Geschichte</h2>
+      <p>
+        Jede Bohne erzählt eine Geschichte – von den Hügeln El Salvadors, von den Händen der Produzenten, von Tradition und Hingabe. Brisa Salvadoreña steht für Authentizität, Nachhaltigkeit und die Kunst des Röstens.
+      </p>
     </section>
 
     <section id="produkte">
-      <div class="grid">
-        <div><img src="pictures/coffee.png" alt="Kaffeetasse" /></div>
-        <div>
-          <h2>Produkte</h2>
-          <ul>
-            <li><strong>Café Brisa Salvadoreña:</strong> 100 % Arabica Bourbon, handverlesen, sonnengetrocknet, mit Noten von Schokolade, roten Beeren und Zitrus.</li>
-            <li><strong>Ceremonia del Cacao:</strong> Zeremonieller Kakao, 100 % pur, aus alten Criollo-Bohnen, ideal für Meditation, Rituale oder bewussten Genuss.</li>
-            <li><strong>Kakaonibs:</strong> Knusprige Energie aus purer Kakaobohne – ideal für Müsli, Smoothies oder pur.</li>
-          </ul>
-          <p>Alle Produkte stammen direkt von unseren Partnerfincas und werden ohne Zwischenhändler vertrieben. So garantieren wir höchste Qualität und faire Preise für die Produzenten.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="geschichte">
+      <h2>Unsere Produkte</h2>
       <div class="grid">
         <div>
-          <h2>Unsere Geschichte</h2>
-          <p>Die Idee zu Brisa Salvadoreña entstand auf einer Reise durch die Kaffeeplantagen rund um den Vulkan Izalco. Die Begegnungen mit den Menschen vor Ort, ihre Leidenschaft und ihr Wissen über den Anbau von Kaffee und Kakao haben uns tief beeindruckt.</p>
-          <p>Heute arbeiten wir mit mehreren Familienbetrieben zusammen, die ihre Produkte mit Liebe und Sorgfalt herstellen. Unsere Geschichte ist jung, aber sie wurzelt tief in der Tradition und dem Stolz eines Landes, das Geschmack, Kultur und Herzblut vereint.</p>
+          <img src="pictures/bourbon.jpg" alt="Bourbon Arabica" />
         </div>
-        <div><img src="pictures/farmer1.png" alt="Kaffeebauer in El Salvador" /></div>
+        <div>
+          <img src="pictures/pacamara.jpg" alt="Pacamara Arabica" />
+        </div>
+        <div>
+          <img src="pictures/caturra_typica.jpg" alt="Caturra & Typica" />
+        </div>
+        <div>
+          <img src="pictures/cuyancua_kakao.jpg" alt="Zeremonieller Kakao Cuyancùa" />
+        </div>
       </div>
     </section>
 
     <section id="kontakt">
-      <div class="grid">
-        <div><img src="pictures/landscape.png" alt="Landschaft El Salvador" /></div>
-        <div>
-          <h2>Kontakt</h2>
-          <p>Du möchtest mehr über unsere Produkte erfahren oder mit uns zusammenarbeiten? Schreib uns!</p>
-          <p>
-            📧 E-Mail: <a href="mailto:info@brisasalvadorena.com">info@brisasalvadorena.com</a><br />
-            📸 Instagram: <a href="https://instagram.com/brisasalvadorena" target="_blank">@brisasalvadorena</a><br />
-            📍 Standort: Berlin, Deutschland
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="impressum">
-      <h2>Impressum</h2>
-      <p>Brisa Salvadoreña GmbH<br />
-         Musterstraße 1, 12345 Berlin<br />
-         Handelsregister: HRB 123456<br />
-         Geschäftsführer: Huawai</p>
+      <h2>Kontakt</h2>
+      <p>Schreib uns bei Fragen oder Bestellungen: <a href="mailto:info@brisa-salvadorena.com">info@brisa-salvadorena.com</a></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Brisa Salvadoreña – Alle Rechte vorbehalten.</p>
+    <p>&copy; 2025 Brisa Salvadoreña</p>
+    <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
   </footer>
-
 </body>
 </html>
