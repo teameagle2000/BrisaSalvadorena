@@ -14,17 +14,26 @@
       color: #3e230a;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background-color: #3e230a;
+      z-index: 1000;
+    }
+
+    .nav-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 12px 20px;
-      z-index: 1000;
     }
 
     .nav-title {
@@ -63,9 +72,6 @@
         display: none;
         flex-direction: column;
         background-color: #3e230a;
-        position: absolute;
-        top: 50px;
-        left: 0;
         width: 100%;
         padding: 10px 0;
       }
@@ -82,17 +88,13 @@
     header img,
     .pride-banner {
       width: 100%;
-      max-width: 1200px;
       height: auto;
       display: block;
       object-fit: cover;
-      margin: 0 auto;
     }
 
     main {
-      padding: 100px 20px 40px;
-      max-width: 1200px;
-      margin: auto;
+      padding: 100px 0 40px;
     }
 
     h2 {
@@ -151,28 +153,34 @@
 </head>
 <body>
   <nav>
-    <div class="nav-title">Brisa Salvadoreña</div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="#">Home</a>
-      <a href="#ueberuns">Über uns</a>
-      <a href="#story">Unsere Geschichte</a>
-      <a href="#produkte">Produkte</a>
-      <a href="#kontakt">Kontakt</a>
+    <div class="container nav-inner">
+      <div class="nav-title">Brisa Salvadoreña</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#ueberuns">Über uns</a>
+        <a href="#story">Unsere Geschichte</a>
+        <a href="#produkte">Produkte</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
     </div>
   </nav>
 
   <header>
-    <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
+    <div class="container">
+      <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
+    </div>
   </header>
 
-  <img src="pictures/roasted_with_pride.jpg" alt="Roasted with Pride" class="pride-banner" />
+  <div class="container">
+    <img src="pictures/roasted_with_pride.jpg" alt="Roasted with Pride" class="pride-banner" />
+  </div>
 
-  <main>
+  <main class="container">
     <section id="ueberuns">
       <h2>Über uns</h2>
       <p>
