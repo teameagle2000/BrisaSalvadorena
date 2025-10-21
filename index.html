@@ -14,16 +14,9 @@
       color: #3e230a;
     }
 
-    header {
-      position: relative;
-      width: 100%;
-      max-height: 220px;
-      overflow: hidden;
-    }
-
     header img {
       width: 100%;
-      height: auto;
+      max-height: 220px;
       object-fit: cover;
       display: block;
     }
@@ -46,6 +39,12 @@
       align-items: center;
       padding: 10px 20px;
       z-index: 1000;
+    }
+
+    .nav-title {
+      color: #f0d7a1;
+      font-weight: bold;
+      font-size: 18px;
     }
 
     .nav-links {
@@ -95,7 +94,7 @@
     }
 
     main {
-      padding: 80px 20px 40px;
+      padding: 100px 20px 40px;
       max-width: 1200px;
       margin: auto;
     }
@@ -154,12 +153,14 @@
 </head>
 <body>
   <nav>
+    <div class="nav-title">Brisa Salvadoreña</div>
     <div class="hamburger" onclick="toggleMenu()">
       <div></div>
       <div></div>
       <div></div>
     </div>
     <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
       <a href="#ueberuns">Über uns</a>
       <a href="#story">Unsere Geschichte</a>
       <a href="#produkte">Produkte</a>
