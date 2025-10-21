@@ -35,12 +35,12 @@
     }
 
     nav {
-      background-color: #6f4e37;
+      background-color: #f0d7a1;
     }
 
     .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
+      background-color: #6f4e37;
+      border-radius: 6px;
       padding: 12px 20px;
       display: flex;
       justify-content: center;
@@ -99,7 +99,7 @@
     }
 
     section {
-      scroll-margin-top: 80px;
+      scroll-margin-top: 100px;
     }
 
     h2 {
@@ -142,16 +142,16 @@
     }
 
     footer {
-      background-color: #6f4e37;
-      color: #f0d7a1;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      background-color: #f0d7a1;
     }
 
-    footer .container {
-      max-width: 1200px;
-      margin: 0 auto;
+    footer .footer-inner {
+      background-color: #6f4e37;
+      border-radius: 6px;
+      padding: 20px;
+      color: #f0d7a1;
+      text-align: center;
+      font-size: 14px;
     }
 
     footer a {
@@ -167,18 +167,20 @@
   </header>
 
   <nav>
-    <div class="nav-inner container">
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="nav-links" id="navLinks">
-        <a href="#">Home</a>
-        <a href="#ueberuns">Über uns</a>
-        <a href="#story">Unsere Geschichte</a>
-        <a href="#produkte">Produkte</a>
-        <a href="#kontakt">Kontakt</a>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#">Home</a>
+          <a href="#ueberuns">Über uns</a>
+          <a href="#story">Unsere Geschichte</a>
+          <a href="#produkte">Produkte</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -236,8 +238,10 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Brisa Salvadoreña</p>
-      <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
+      <div class="footer-inner">
+        <p>&copy; 2025 Brisa Salvadoreña</p>
+        <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
+      </div>
     </div>
   </footer>
 
