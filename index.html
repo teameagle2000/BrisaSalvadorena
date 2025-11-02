@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brisa Salvadoreña</title>
-    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Open+Sans&amp;display=swap"
-
-      rel="stylesheet">
-    <style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brisa Salvadoreña</title>
+  <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -160,127 +158,140 @@
       margin: 0 10px;
     }
   </style>
-  </head>
-  <body>
-    <header> <img src="pictures/head_banner1.png" alt="Brisa Salvadoreña Banner">
-    </header>
-    <nav>
-      <div class="container">
-        <div class="nav-inner">
-          <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="nav-links" id="navLinks"> <a href="#">Inicio</a> <a href="#sobre">Sobre
-              nosotros</a> <a href="#productos">Productos</a> <a href="#contacto">Contacto</a>
-          </div>
+</head>
+<body>
+  <header>
+    <img src="pictures/head_banner1.png" alt="Brisa Salvadoreña Banner">
+  </header>
+
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div></div><div></div><div></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#">Inicio</a>
+          <a href="#sobre">Sobre nosotros</a>
+          <a href="#productos">Productos</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </div>
-    </nav>
-    <div class="container"> <img src="pictures/roasted_with_pride1.png" alt="Roasted with Pride"
+    </div>
+  </nav>
 
-        class="pride-banner"> </div>
-    <main class="container">
-      <section id="sobre">
-        <h2>Sobre nosotros</h2>
-        <div class="about-us-flex"> <img src="pictures/about_us.png" alt="Sobre nosotros">
-          <p> Brisa Salvadoreña nace en las regiones altas de El Salvador, donde
-            el café y el cacao se cultivan desde generaciones con respeto por la
-            naturaleza y en estructuras familiares. Trabajamos en Ahuachapán,
-            Santa Ana y Cuyancùa, directamente con cooperativas locales que
-            comparten nuestros valores.<br>
-            <br>
-            Nuestros cultivos se encuentran en las laderas fértiles del volcán
-            Ilamatepec, cuyos suelos minerales y clima fresco ofrecen
-            condiciones ideales para un café de alta calidad y un cacao
-            aromático. Las plantas crecen en policultivo bajo árboles de sombra,
-            sin químicos, respetando los ciclos naturales.<br>
-            <br>
-            La cosecha se realiza a mano, la fermentación y el secado se hacen
-            al sol con métodos tradicionales que conservan la calidad y la
-            fertilidad del suelo. Nuestro trabajo no solo protege el medio
-            ambiente, sino que también genera ingresos justos para las familias
-            locales. Así nace un producto que beneficia tanto a las personas
-            como a la naturaleza. </p>
-        </div>
-      </section>
-      <section id="productos">
-        <h2>Productos</h2>
-        <div class="product-flex"> <img src="pictures/farmer2.png" alt="Café">
-          <div>
-            <h3>Bourbon</h3>
-            <p> Bourbon es una de las variedades de café Arábica más antiguas y
-              valoradas en El Salvador. Cultivada en regiones como Santa Ana y
-              Ahuachapán, se beneficia de suelos volcánicos ricos y climas
-              frescos de altura. Su perfil de sabor es suave y equilibrado, con
-              notas dulces como caramelo y miel, una acidez ligera y un cuerpo
-              redondo. Es ideal para quienes buscan una taza limpia y armoniosa.
-            </p>
-          </div>
-        </div>
-        <div class="product-flex"> <img src="pictures/cafe.png" alt="Café">
-          <div>
-            <h3>Pacamara</h3>
-            <p> Pacamara es una variedad única desarrollada en El Salvador,
-              resultado del cruce entre Pacas y Maragogipe. Se distingue por sus
-              granos grandes y su complejidad aromática. Cultivada en zonas
-              altas con sombra natural, ofrece sabores intensos y variados:
-              frutas rojas, flores, especias y chocolate oscuro. Su carácter
-              expresivo la convierte en una favorita entre tostadores
-              especializados y amantes del café de origen. </p>
-          </div>
-        </div>
-        <div class="product-flex"> <img src="pictures/cacao.png" alt="Cacao">
-          <div>
-            <h3>Cacao Cuyancùa</h3>
-            <p> Cacao ceremonial de antiguos granos Criollo. Ideal para
-              rituales, meditación y disfrute consciente. </p>
-          </div>
-        </div>
-      </section>
-      <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="contactForm">
-          <div class="form-group"> <label for="nombre">Nombre:</label> <input
+  <div class="container">
+    <img src="pictures/roasted_with_pride1.png" alt="Roasted with Pride" class="pride-banner">
+  </div>
 
-              id="nombre" name="nombre" required="" placeholder="Tu nombre" type="text">
-          </div>
-          <div class="form-group"> <label for="mensaje">Mensaje:</label> <textarea
-
-id="mensaje" name="mensaje" required="" placeholder="Escribe tu mensaje aquí..."></textarea>
-          </div>
-          <div class="form-group"> <label for="email">Correo electrónico
-              (opcional):</label> <input id="email" name="email" placeholder="tucorreo@ejemplo.com"
-
-              type="email"> </div>
-          <button type="submit">Enviar</button> </form>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <div class="footer-inner">
-          <p>© 2025 Brisa Salvadoreña</p>
-          <a href="#">Privacidad</a> | <a href="#">Aviso legal</a> </div>
+  <main class="container">
+    <section id="sobre">
+      <h2>Sobre nosotros</h2>
+      <div class="about-us-flex">
+        <img src="pictures/about_us.png" alt="Sobre nosotros">
+        <p>
+          Brisa Salvadoreña nace en las regiones altas de El Salvador, donde el café y el cacao se cultivan desde generaciones con respeto por la naturaleza y en estructuras familiares. Trabajamos en Ahuachapán, Santa Ana y Cuyancùa, directamente con cooperativas locales que comparten nuestros valores.<br><br>
+          Nuestros cultivos se encuentran en las laderas fértiles del volcán Ilamatepec, cuyos suelos minerales y clima fresco ofrecen condiciones ideales para un café de alta calidad y un cacao aromático. Las plantas crecen en policultivo bajo árboles de sombra, sin químicos, respetando los ciclos naturales.<br><br>
+          La cosecha se realiza a mano, la fermentación y el secado se hacen al sol con métodos tradicionales que conservan la calidad y la fertilidad del suelo. Nuestro trabajo no solo protege el medio ambiente, sino que también genera ingresos justos para las familias locales. Así nace un producto que beneficia tanto a las personas como a la naturaleza.
+        </p>
       </div>
-    </footer>
-    <script>
-    function toggleMenu() {
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+
+      <div class="product-flex">
+        <img src="pictures/farmer2.png" alt="Café">
+        <div>
+          <h3>Bourbon</h3>
+          <p>
+            Bourbon es una de las variedades de café Arábica más antiguas y valoradas en El Salvador. Cultivada en regiones como Santa Ana y Ahuachapán, se beneficia de suelos volcánicos ricos y climas frescos de altura. Su perfil de sabor es suave y equilibrado, con notas dulces como caramelo y miel, una acidez ligera y un cuerpo redondo. Es ideal para quienes buscan una taza limpia y armoniosa.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-flex">
+        <img src="pictures/cafe.png" alt="Café">
+        <div>
+          <h3>Pacamara</h3>
+          <p>
+            Pacamara es una variedad única desarrollada en El Salvador, resultado del cruce entre Pacas y Maragogipe. Se distingue por sus granos grandes y su complejidad aromática. Cultivada en zonas altas con sombra natural, ofrece sabores intensos y variados: frutas rojas, flores, especias y chocolate oscuro. Su carácter expresivo la convierte en una favorita entre tostadores especializados y amantes del café de origen.
+          </p>
+        </div>
+      </div>
+
+      <div class="product-flex">
+        <img src="pictures/cacao.png" alt="Cacao">
+        <div>
+          <h3>Cacao Cuyancùa</h3>
+          <p>
+            Cacao ceremonial de antiguos granos Criollo. Ideal para rituales, meditación y disfrute consciente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico (opcional):</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p>© 2025 Brisa Salvadoreña</p>
+        <a href="#">Privacidad</a> | <a href="#">Aviso legal</a>
+      </div>
+    </div>
+  </footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+
+  // Menü automatisch schließen nach Klick auf Link (nur bei mobiler Ansicht)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
       const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('nombre').value;
-      const mensaje = document.getElementById('mensaje').value;
-      const email = document.getElementById('email').value;
-
-      const confirmacion = document.createElement('p');
-      confirmacion.textContent = `Gracias, ${nombre}. Tu mensaje fue registrado.`;
-      this.parentNode.appendChild(confirmacion);
-      this.reset();
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
     });
-  </script>
-  </body>
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const email = document.getElementById('email').value;
+
+    const confirmacion = document.createElement('p');
+    confirmacion.textContent = `Gracias, ${nombre}. Tu mensaje fue registrado.`;
+    this.parentNode.appendChild(confirmacion);
+    this.reset();
+  });
+</script>
+
+</body>
 </html>
+
