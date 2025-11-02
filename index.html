@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brisa Salvadoreña</title>
-  <link rel="icon" href="pictures/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brisa Salvadoreña</title>
+    <link rel="icon" href="pictures/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Open+Sans&amp;display=swap"
 
+      rel="stylesheet">
+    <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background-color: #f0d7a1;
-      color: #3e230a;
+      background-color: #4b3420;
+      color: #F7CE8E;
     }
-
+    h1, h2, h3, h4, h5, h6, p, a, label, input, textarea, button {
+      color: #F7CE8E;
+    }
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
-
     header img,
     .pride-banner {
       width: 100%;
       max-width: 1200px;
       height: auto;
-      display: block;
       object-fit: cover;
+      max-height: 400px;
+      display: block;
       margin: 0 auto;
     }
-
     nav {
-      background-color: #f0d7a1;
+      background-color: #a67c52;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
     .nav-inner {
       background-color: #6f4e37;
       border-radius: 6px;
@@ -47,34 +50,29 @@
       align-items: center;
       flex-wrap: wrap;
     }
-
     .nav-links {
       display: flex;
-      gap: 20px;
+      gap: 40px;
       flex-wrap: wrap;
     }
-
     .nav-links a {
-      color: #f0d7a1;
+      color: #F7CE8E;
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
     }
-
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       margin-left: auto;
     }
-
     .hamburger div {
       width: 25px;
       height: 3px;
-      background-color: #f0d7a1;
+      background-color: #F7CE8E;
       margin: 4px 0;
     }
-
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -84,172 +82,205 @@
         padding: 10px 0;
         align-items: center;
       }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
+      .about-us-flex, .product-flex { flex-direction: column; }
+      .about-us-flex img, .product-flex img { margin-bottom: 20px; max-width: 100%; }
     }
-
-    main {
-      padding: 40px 0;
-    }
-
-    section {
-      scroll-margin-top: 100px;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      margin-top: 15px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .about-us-flex, .product-flex {
+      display: flex;
       gap: 30px;
-      margin-top: 30px;
+      align-items: flex-start;
+      margin-bottom: 40px;
     }
-
-    .grid div {
-      background-color: transparent;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
+    .product-flex > div {
+      flex: 1;
     }
-
-    .grid img {
-      width: 100%;
+    .about-us-flex img, .product-flex img {
+      max-width: 300px;
       height: auto;
-      max-width: 100%;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    footer {
-      background-color: #f0d7a1;
+    #contactForm {
+      max-width: 800px;
+      margin: 0 auto 80px auto;
+      padding: 20px;
     }
-
-    footer .footer-inner {
+    .form-group {
+      margin-bottom: 24px;
+    }
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background-color: rgba(111, 78, 55, 0.2);
+      border: 1px solid #F7CE8E;
+      border-radius: 6px;
+      font-size: 16px;
+      color: #F7CE8E;
+    }
+    form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    form input::placeholder,
+    form textarea::placeholder {
+      color: #F7CE8E;
+      opacity: 0.6;
+    }
+    form button {
+      background-color: #6f4e37;
+      color: #F7CE8E;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #4b3420;
+    }
+    .footer-inner {
       background-color: #6f4e37;
       border-radius: 6px;
       padding: 20px;
-      color: #f0d7a1;
+      color: #F7CE8E;
       text-align: center;
       font-size: 14px;
     }
-
     footer a {
-      color: #f0d7a1;
+      color: #F7CE8E;
       text-decoration: underline;
       margin: 0 10px;
     }
   </style>
-</head>
-<body>
-  <header>
-    <img src="pictures/header_banner.jpg" alt="Brisa Salvadoreña Banner" />
-  </header>
-
-  <nav>
-    <div class="container">
-      <div class="nav-inner">
-        <div class="hamburger" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="nav-links" id="navLinks">
-          <a href="#">Home</a>
-          <a href="#ueberuns">Über uns</a>
-          <a href="#story">Unsere Geschichte</a>
-          <a href="#produkte">Produkte</a>
-          <a href="#kontakt">Kontakt</a>
+  </head>
+  <body>
+    <header> <img src="pictures/head_banner1.png" alt="Brisa Salvadoreña Banner">
+    </header>
+    <nav>
+      <div class="container">
+        <div class="nav-inner">
+          <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="nav-links" id="navLinks"> <a href="#">Inicio</a> <a href="#sobre">Sobre
+              nosotros</a> <a href="#productos">Productos</a> <a href="#contacto">Contacto</a>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <div class="container"> <img src="pictures/roasted_with_pride1.png" alt="Roasted with Pride"
 
-  <div class="container">
-    <img src="pictures/roasted_with_pride.jpg" alt="Roasted with Pride" class="pride-banner" />
-  </div>
+        class="pride-banner"> </div>
+    <main class="container">
+      <section id="sobre">
+        <h2>Sobre nosotros</h2>
+        <div class="about-us-flex"> <img src="pictures/about_us.png" alt="Sobre nosotros">
+          <p> Brisa Salvadoreña nace en las regiones altas de El Salvador, donde
+            el café y el cacao se cultivan desde generaciones con respeto por la
+            naturaleza y en estructuras familiares. Trabajamos en Ahuachapán,
+            Santa Ana y Cuyancùa, directamente con cooperativas locales que
+            comparten nuestros valores.<br>
+            <br>
+            Nuestros cultivos se encuentran en las laderas fértiles del volcán
+            Ilamatepec, cuyos suelos minerales y clima fresco ofrecen
+            condiciones ideales para un café de alta calidad y un cacao
+            aromático. Las plantas crecen en policultivo bajo árboles de sombra,
+            sin químicos, respetando los ciclos naturales.<br>
+            <br>
+            La cosecha se realiza a mano, la fermentación y el secado se hacen
+            al sol con métodos tradicionales que conservan la calidad y la
+            fertilidad del suelo. Nuestro trabajo no solo protege el medio
+            ambiente, sino que también genera ingresos justos para las familias
+            locales. Así nace un producto que beneficia tanto a las personas
+            como a la naturaleza. </p>
+        </div>
+      </section>
+      <section id="productos">
+        <h2>Productos</h2>
+        <div class="product-flex"> <img src="pictures/farmer2.png" alt="Café">
+          <div>
+            <h3>Bourbon</h3>
+            <p> Bourbon es una de las variedades de café Arábica más antiguas y
+              valoradas en El Salvador. Cultivada en regiones como Santa Ana y
+              Ahuachapán, se beneficia de suelos volcánicos ricos y climas
+              frescos de altura. Su perfil de sabor es suave y equilibrado, con
+              notas dulces como caramelo y miel, una acidez ligera y un cuerpo
+              redondo. Es ideal para quienes buscan una taza limpia y armoniosa.
+            </p>
+          </div>
+        </div>
+        <div class="product-flex"> <img src="pictures/cafe.png" alt="Café">
+          <div>
+            <h3>Pacamara</h3>
+            <p> Pacamara es una variedad única desarrollada en El Salvador,
+              resultado del cruce entre Pacas y Maragogipe. Se distingue por sus
+              granos grandes y su complejidad aromática. Cultivada en zonas
+              altas con sombra natural, ofrece sabores intensos y variados:
+              frutas rojas, flores, especias y chocolate oscuro. Su carácter
+              expresivo la convierte en una favorita entre tostadores
+              especializados y amantes del café de origen. </p>
+          </div>
+        </div>
+        <div class="product-flex"> <img src="pictures/cacao.png" alt="Cacao">
+          <div>
+            <h3>Cacao Cuyancùa</h3>
+            <p> Cacao ceremonial de antiguos granos Criollo. Ideal para
+              rituales, meditación y disfrute consciente. </p>
+          </div>
+        </div>
+      </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+          <div class="form-group"> <label for="nombre">Nombre:</label> <input
 
-  <main class="container">
-    <section id="ueberuns">
-      <h2>Über uns</h2>
-      <p>
-        Brisa Salvadoreña ist mehr als Kaffee – es ist ein Lebensgefühl. Wir sind ein Familienbetrieb aus El Salvador, der mit Leidenschaft und Respekt gegenüber Natur und Mensch arbeitet. Unsere Bohnen stammen aus nachhaltigem Anbau, handverlesen und mit Liebe geröstet.
-      </p>
-    </section>
+              id="nombre" name="nombre" required="" placeholder="Tu nombre" type="text">
+          </div>
+          <div class="form-group"> <label for="mensaje">Mensaje:</label> <textarea
 
-    <section id="story">
-      <h2>Unsere Geschichte</h2>
-      <p>
-        Gegründet in den Hügeln von Santa Ana, entstand Brisa Salvadoreña aus dem Wunsch, die Schönheit und Tiefe salvadorianischen Kaffees mit der Welt zu teilen. Unsere Farmen sind Orte der Begegnung, der Rituale und des Wissens – wo jede Bohne eine Geschichte trägt.
-      </p>
-    </section>
+id="mensaje" name="mensaje" required="" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+          <div class="form-group"> <label for="email">Correo electrónico
+              (opcional):</label> <input id="email" name="email" placeholder="tucorreo@ejemplo.com"
 
-    <section id="produkte">
-      <h2>Unsere Produkte</h2>
-      <div class="grid">
-        <div>
-          <img src="pictures/bourbon.jpg" alt="Bourbon Arabica" />
-          <h3>Bourbon</h3>
-          <p>Mild, süßlich, mit ausgewogener Säure. Eine der ältesten Arabica-Varietäten aus Santa Ana und Ahuachapán.</p>
-        </div>
-        <div>
-          <img src="pictures/pacamara.jpg" alt="Pacamara Arabica" />
-          <h3>Pacamara</h3>
-          <p>Große Bohnen mit komplexem Aroma, floralen und fruchtigen Noten. Beliebt bei Spezialitätenröstern.</p>
-        </div>
-        <div>
-          <img src="pictures/caturra_typica.jpg" alt="Caturra & Typica" />
-          <h3>Caturra & Typica</h3>
-          <p>Klassische Arabica-Varietäten mit feinem Körper und klarer Säure. Häufig in kleineren Farmen zu finden.</p>
-        </div>
-        <div>
-          <img src="pictures/cuyancua_kakao.jpg" alt="Zeremonieller Kakao Cuyancùa" />
-          <h3>Cuyancùa Kakao</h3>
-          <p>Zeremonieller Kakao aus alten Criollo-Bohnen. Für Rituale, Meditation und bewussten Genuss.</p>
-        </div>
+              type="email"> </div>
+          <button type="submit">Enviar</button> </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <p>© 2025 Brisa Salvadoreña</p>
+          <a href="#">Privacidad</a> | <a href="#">Aviso legal</a> </div>
       </div>
-    </section>
-
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Schreib uns bei Fragen oder Bestellungen: <a href="mailto:info@brisa-salvadorena.com">info@brisa-salvadorena.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <p>&copy; 2025 Brisa Salvadoreña</p>
-        <a href="#">Datenschutz</a> | <a href="#">Impressum</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
+    </footer>
+    <script>
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
       navLinks.classList.toggle('active');
     }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const email = document.getElementById('email').value;
+
+      const confirmacion = document.createElement('p');
+      confirmacion.textContent = `Gracias, ${nombre}. Tu mensaje fue registrado.`;
+      this.parentNode.appendChild(confirmacion);
+      this.reset();
+    });
   </script>
-</body>
+  </body>
 </html>
