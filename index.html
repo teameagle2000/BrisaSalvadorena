@@ -157,6 +157,13 @@
       text-decoration: underline;
       margin: 0 10px;
     }
+
+    /* Google Translate Fix */
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0px !important; }
+    .goog-te-gadget { z-index: 1 !important; position: relative !important; }
+    .goog-te-menu-frame { z-index: 9999 !important; }
+    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
   </style>
 </head>
 <body>
@@ -262,36 +269,34 @@
       </div>
     </div>
   </footer>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
-  }
 
-  // Menü automatisch schließen nach Klick auf Link (nur bei mobiler Ansicht)
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
+  <script>
+    function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
-      const isMobile = window.innerWidth <= 768;
-      if (isMobile && navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-      }
+      navLinks.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const navLinks = document.getElementById('navLinks');
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile && navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+        }
+      });
     });
-  });
 
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const mensaje = document.getElementById('mensaje').value;
-    const email = document.getElementById('email').value;
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const mensaje = document.getElementById('mensaje').value;
+      const email = document.getElementById('email').value;
 
-    const confirmacion = document.createElement('p');
-    confirmacion.textContent = `Gracias, ${nombre}. Tu mensaje fue registrado.`;
-    this.parentNode.appendChild(confirmacion);
-    this.reset();
-  });
-</script>
-
+      const confirmacion = document.createElement('p');
+      confirmacion.textContent = `Gracias, ${nombre}. Tu mensaje fue registrado.`;
+      this.parentNode.appendChild(confirmacion);
+      this.reset();
+    });
+  </script>
 </body>
 </html>
-
